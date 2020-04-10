@@ -39,7 +39,7 @@ def cityreader(cities=[]):
             next(csv_reader)
         for row in csv_reader:
             # print(row[0], row[3], row[4])
-            cities.append(City(row[0], row[3], row[4]))
+            cities.append(City(row[0], float(row[3]), float(row[4])))
 
         return cities
 
@@ -80,21 +80,32 @@ for c in cities:
 # Salt Lake City: (40.7774,-111.9301)
 
 # TODO Get latitude and longitude values from the user
-user_input = input("""
-==============================
-Enter the points for the lower left and upper left point of the square area.
-Please enter in the form: lat1,lon1,lat2,lon2
- """
-                   )
-cords = user_input.split(',')
-for i in range(len(cords)):
-    cords[i] = float(cords[i])
+# user_input = input("""
+# ==============================
+# Enter the points for the lower left and upper left point of the square area.
+# Please enter in the form: lat1,lon1,lat2,lon2
+#  """
+#                    )
+# cords = user_input.split(',')
+# for i in range(len(cords)):
+#     cords[i] = float(cords[i])
 
-print(cords)
+# print(cords)
 
 
 def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
     # within will hold the cities that fall within the specified region
-    within = []
+    # within = []
+    # line_size = ((abs(lat1 - lat2)**2) + (abs(lon1 - lon2)**2)**0.5)
+    # square_area = line_size**2
+    # total_area_of_all_triangles = 0
 
-    return within
+    # TODO Ensure that the lat and lon valuse are all floats
+    # Go through each city and check to see if it falls within
+    # the specified coordinates.
+    # for city in cities:
+    #     if city.lat >= lat1 and city.lat <= (lat1 + line_size):
+    #         if
+
+    # return within
+    pass
